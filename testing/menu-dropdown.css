@@ -1,34 +1,106 @@
-.clearfix:after {
-content:close-quote;
-display: block;
-}
-.nav-wrapper {
-   width:100%;
-   background: #999;
-}
- 
-.nav-menu {
-   position:relative;
-   display:inline-block;
-}
- 
-.nav-menu li {
-   display: inline;
-   list-style-type: none;
-}
- 
-.sub-menu {
-   position:absolute;
-   display:none;
-   background: #ccc;
-}
-.nav-menu ul li:hover > ul {
-   display:inline-block;
-}
-.nav-menu > ul > li:after {
-   content: "\25BC"; /*escaped unicode for the down arrow*/
-   font-size: .5em;
-   display: inline;
-   position: relative;
-   }/* CSS Document */
+/* CSS Document */
 
+nav {
+	background-color: #E77919;
+	height: 30px;
+	display: block;
+	clear: both;
+	
+}
+nav ul {
+	display: inline;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+nav ul li {
+	display: inline;
+	height:30px;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:  1em;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	white-space: nowrap;
+}
+nav ul li a:link, nav ul li a:visited {
+	display: block;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	text-decoration: none;
+	line-height: 30px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #E77919;
+}
+nav ul li a:hover {
+	color: #CCC;
+}
+nav ul li a.active:link, nav ul li a.active:visited {
+	background-color: #E74C3C;
+}
+
+
+
+
+
+li {
+	background-color: #E77919;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+	background: #f2f2f2;
+}
+
+ul li {
+	display: inline-block;
+	position: relative;
+	line-height: 15px;
+	text-align: justiy;
+}
+
+ul li a {
+	display: block;
+	padding: 0px 25px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	width: auto;
+}
+
+ul li a:hover {
+	color: #fff;
+	background: #B04313;
+	position: relative;
+}
+
+ul li ul.dropdown {
+	min-width: 15px; /* Set width of the dropdown */
+	max-width:1000px;
+	background: #f2f2f2;
+	display: none;
+	position: absolute;
+	z-index: 999;
+	left: 0;
+	width:50px;
+}
+
+ul li ul.dropdown li a{
+width:180px;
+
+}
+
+ul li:hover ul.dropdown {
+	display: block; /* Display the dropdown */
+	position: absolute;
+}
+
+ul li ul.dropdown li {
+	display: block;
+}
